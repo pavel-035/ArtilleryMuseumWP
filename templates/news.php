@@ -13,7 +13,12 @@
  * Template Name: Страница "Новости"
  */
 
-$news = carbon_get_theme_option('news');
+$news = array(
+  'numberposts' => -1,
+  'post_type'   => 'news'
+);
+
+$news = get_posts( $news );
 
 get_header();
 ?>
@@ -24,23 +29,25 @@ get_header();
           <?php single_post_title(); ?>
         </h2>
         <div class="news_cards">
-          <? foreach ($news as $item) { ?>
-              <a href="#" class="news_card">
+            <? foreach ($news as $post) { ?>
+              <?php setup_postdata($post); ?>
+              <a href="<?= get_post_permalink(); ?>" class="news_card">
                   <div class="news_title">
-                    <?php echo $item['news_title']; ?>
+                    <?= get_field('news_title') ?>
                   </div>
                   <div class="news_image img_box">
                       <div
                         class="news_image-before"
-                        style="background-image: url(<?= wp_get_attachment_image_url( $item['news_main_image'], 'full' ); ?>)"
+                        style="background-image: url(<?= get_field('news_main_image') ?>)"
                       ></div>
-                      <img src="<?= wp_get_attachment_image_url( $item['news_main_image'], 'full' ); ?>" alt="">
+                      <img src="<?= get_field('news_main_image') ?>" alt="">
                   </div>
                   <div class="news_date">
-                    <?php echo $item['news_date']; ?>
+                    <?= get_field('news_date') ?>
                   </div>
               </a>
-          <? }; ?>
+            <?php } ?>
+            <?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
         </div>
       </div>
     </section>

@@ -180,6 +180,32 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+$news_labels = array(
+  'name' => 'Новости',
+  'singular_name' => 'Новость',
+  'add_new' => 'Добавить новость',
+  'add_new_item' => 'Добавить новость',
+  'edit_item' => 'Редактировать новость',
+  'new_item' => 'Новая новость',
+  'all_items' => 'Все новости',
+  'search_items' => 'Искать новость',
+  'not_found' =>  'Новсти по заданным критериям не найдены.',
+  'not_found_in_trash' => 'В корзине нет новостей.',
+  'menu_name' => 'Новости'
+);
+
+$news_args = array(
+  'labels' => $news_labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'has_archive' => false,
+  'menu_icon' => 'dashicons-image-filter',
+  'menu_position' => 4,
+  'supports' => array( 'title', 'editor', 'thumbnail' )
+);
+
+register_post_type( 'news', $news_args );
+
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
   Container::make( 'theme_options', __( 'Наполнение' ) )
@@ -294,16 +320,6 @@ function crb_attach_theme_options() {
 
       Field::make( 'text', 'main_map', __( 'Ссылка на яндекс координаты' ) ),
       Field::make( 'text', 'contacts_link', __( 'Ссылка на страницу "Контакты"' ) )
-    ) )
-    ->add_tab( __( 'Новости' ), array(
-      Field::make( 'complex', 'news',  __( 'Новости' ) )
-        ->add_fields( array(
-          Field::make( 'text', 'news_title', __( 'Заголовок' ) ),
-          Field::make( 'image', 'news_main_image', __( 'Новостная обложка' ) ),
-          Field::make( 'date', 'news_date', __( 'Дата' ) )
-        ))
-        ->set_layout( 'tabbed-vertical' )
-        ->set_header_template( '<%= news_title %>' )
     ) );
 //    ->add_tab( __( 'О компании' ), array(
 //      Field::make( 'rich_text', 'about_description_one', __( 'Первый блок с текстом' ) ),
