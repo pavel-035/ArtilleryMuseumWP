@@ -34,6 +34,7 @@
                   <?php
                   $args = array(
                     'fallback_cb'       => 'wp_page_menu',
+                    'container'         => 'ul',
                     'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                     'item_spacing'      => 'preserve'
                   );

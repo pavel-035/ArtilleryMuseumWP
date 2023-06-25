@@ -238,3 +238,63 @@ ul, li, button, a, h1, h2, p {
     flex: none;
   }
 }
+
+.news {
+  &_cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  &_card {
+    display: block;
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    overflow: hidden;
+  }
+  &_title {
+    padding: 10px;
+    background: $main_color;
+
+    color: #fff;
+    font-size: 20px;
+  }
+  &_image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 235px;
+    &-before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+
+      background-position: 50% 50%;
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+    }
+    img {
+      position: relative;
+      z-index: 15;
+
+      max-width: 100%;
+      width: auto;
+      max-height: 100%;
+      height: auto;
+    }
+  }
+  &_date {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+
+    font-size: 30px;
+    line-height: 1.2em;
+    letter-spacing: .013em;
+    color: #717171;
+  }
+}

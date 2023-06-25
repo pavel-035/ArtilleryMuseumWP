@@ -197,7 +197,8 @@ function crb_attach_theme_options() {
           Field::make( 'text', 'social_network_link', __( 'Сылка' ) ),
           Field::make( 'image', 'social_network_icon', __( 'Иконка' ) )
         ) )
-        ->set_layout( 'tabbed-vertical' ),
+        ->set_layout( 'tabbed-vertical' )
+        ->set_header_template( '<%= social_network_link %>' ),
 
       Field::make( 'complex', 'timetable',  __( 'Расписание' ) )
         ->add_fields( array(
@@ -270,8 +271,6 @@ function crb_attach_theme_options() {
             ))
             ->set_storage_format('H:i'),
 
-
-
           Field::make( 'time', 'timetable_time_end_cash', __( 'Время закрытия кассы' ) )
             ->set_conditional_logic( array(
               array(
@@ -293,16 +292,19 @@ function crb_attach_theme_options() {
         ) )
         ->set_layout( 'tabbed-vertical' ),
 
-
       Field::make( 'text', 'main_map', __( 'Ссылка на яндекс координаты' ) ),
       Field::make( 'text', 'contacts_link', __( 'Ссылка на страницу "Контакты"' ) )
+    ) )
+    ->add_tab( __( 'Новости' ), array(
+      Field::make( 'complex', 'news',  __( 'Новости' ) )
+        ->add_fields( array(
+          Field::make( 'text', 'news_title', __( 'Заголовок' ) ),
+          Field::make( 'image', 'news_main_image', __( 'Новостная обложка' ) ),
+          Field::make( 'date', 'news_date', __( 'Дата' ) )
+        ))
+        ->set_layout( 'tabbed-vertical' )
+        ->set_header_template( '<%= news_title %>' )
     ) );
-//    ->add_tab( __( 'Главная страница' ), array(
-//      Field::make( 'text', 'above_heading', __( 'Надпись над заголовком' ) ),
-//      Field::make( 'text', 'main_heading', __( 'Главный заголовок' ) ),
-//      Field::make( 'text', 'tagline', __( 'Слоган' ) ),
-//      Field::make( 'media_gallery', 'partners_logo', __( 'Логотипы партнёров' ) )
-//    ) )
 //    ->add_tab( __( 'О компании' ), array(
 //      Field::make( 'rich_text', 'about_description_one', __( 'Первый блок с текстом' ) ),
 //      Field::make( 'rich_text', 'about_description_two', __( 'Второй блок с текстом' ) ),

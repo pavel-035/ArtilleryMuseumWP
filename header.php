@@ -113,6 +113,7 @@
       <?php
       $args = array(
         'menu_class'        => 'navigation_box box',
+        'container'         => 'ul',
         'fallback_cb'       => 'wp_page_menu',
         'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'item_spacing'      => 'preserve'
