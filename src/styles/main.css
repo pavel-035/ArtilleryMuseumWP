@@ -106,7 +106,8 @@ ul, li, button, a, h1, h2, p {
   font-size: 18px;
 }
 .banner_nav {
-  padding-left: 129px;
+  padding-top: 20px;
+  padding-left: 148px;
 }
 .banner_social {
   display: flex;
@@ -148,6 +149,9 @@ ul, li, button, a, h1, h2, p {
   color: #000;
   margin-bottom: 15px;
   font-size: 21px;
+}
+.info_item-warning {
+  color: #843428;
 }
 .info_link {
   color: #000;
@@ -244,6 +248,11 @@ ul, li, button, a, h1, h2, p {
 }
 .information_timetable {
   flex: none;
+}
+.information_text {
+  font-size: 21px;
+  white-space: pre-line;
+  margin-bottom: 30px;
 }
 
 .news_cards {

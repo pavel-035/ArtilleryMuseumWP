@@ -245,6 +245,11 @@ function crb_attach_theme_options() {
       Field::make( 'text', 'main_email', __( 'Эл. почта' ) ),
       Field::make( 'text', 'main_fax', __( 'Факс' ) ),
 
+      Field::make( 'textarea', 'main_info', __( 'Информация в шапке сайта' ) )
+        ->set_rows( 8 ),
+      Field::make( 'textarea', 'main_warning', __( 'Объявление в шапке сайта' ) )
+        ->set_rows( 8 ),
+
       Field::make( 'complex', 'social_networks',  __( 'Соц. сети' ) )
         ->add_fields( array(
           Field::make( 'text', 'social_network_link', __( 'Сылка' ) ),
@@ -347,11 +352,10 @@ function crb_attach_theme_options() {
 
       Field::make( 'text', 'main_map', __( 'Ссылка на яндекс координаты' ) ),
       Field::make( 'text', 'contacts_link', __( 'Ссылка на страницу "Контакты"' ) )
+    ) )
+    ->add_tab( __( 'О музее' ), array(
+      Field::make( 'rich_text', 'about_museum', __( 'Про музей' ) )
     ) );
-//    ->add_tab( __( 'О компании' ), array(
-//      Field::make( 'rich_text', 'about_description_one', __( 'Первый блок с текстом' ) ),
-//      Field::make( 'rich_text', 'about_description_two', __( 'Второй блок с текстом' ) ),
-//    ) )
 //    ->add_tab( __( 'Услуги' ), array(
 //      Field::make( 'rich_text', 'specializations_page_description', __( 'Описание страницы "Услуги"' ) ),
 //      Field::make( 'text', 'specializations_page_link', __( 'Ссылка на страницу "Услуги"' ) ),

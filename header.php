@@ -15,6 +15,8 @@
     $main_logo = wp_get_attachment_image_url( carbon_get_theme_option('main_logo'), 'full' );
 
     $social_networks = carbon_get_theme_option( 'social_networks' );
+    $main_info = carbon_get_theme_option( 'main_info' );
+    $main_warning = carbon_get_theme_option( 'main_warning' );
 ?>
 <!doctype html>
 <html lang="ru">
@@ -24,7 +26,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>МУЗЕЙ ПЕРМСКОЙ АРТИЛЛЕРИИ</title>
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/src/styles/main.css">
     
@@ -97,15 +99,12 @@
                 </li>
                 <li class="info_item">
                     <p>
-                        Музей открыт
-                        с 11.00 до 18.00 (касса закрывается на час раньше)
-                        вход посетителей на территорию музея прекращается в 17.00
-                        выходные дни – понедельник, вторник, последний четверг месяца.
+                      <?= $main_info; ?>
                     </p>
                 </li>
-                <li class="info_item">
+                <li class="info_item info_item-warning">
                     <p>
-                        Внимание! 12 июня, в День России, музей будет открыт. ЗАКРЫТ - 13 и 14 июня.
+                      <?= $main_warning; ?>
                     </p>
                 </li>
             </ul>
