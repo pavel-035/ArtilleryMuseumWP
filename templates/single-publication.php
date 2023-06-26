@@ -69,14 +69,14 @@ get_header();
                     <div class="post-navigation_section">
                       <?php if ($previous_post) : ?>
                           <a href="<?= get_permalink($previous_post->ID); ?>">
-                              Предыдущая новость: <?= $previous_post->post_title; ?>
+                              Предыдущая публикация: <?= $previous_post->post_title; ?>
                           </a>
                       <?php endif; ?>
                     </div>
                     <div class="post-navigation_section">
                       <?php if ($next_post) : ?>
                           <a href="<?= get_permalink($next_post->ID); ?>">
-                              Следующая новость: <?= $next_post->post_title; ?>
+                              Следующая публикация: <?= $next_post->post_title; ?>
                           </a>
                       <?php endif; ?>
                     </div>

@@ -61,5 +61,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/slick/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/gallery.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/buyForm.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
 </body>
 </html>
