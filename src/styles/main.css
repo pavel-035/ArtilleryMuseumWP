@@ -550,7 +550,7 @@ ul, li, button, a, h1, h2, p {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 200;
+    z-index: 140;
     background: #a3a3a3;
     padding: 10px 10px;
   }
@@ -590,6 +590,68 @@ ul, li, button, a, h1, h2, p {
   }
   .burger_menu.show {
     display: block;
+  }
+  .news_cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .news_card {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .publications_card {
+    display: block;
+    padding: 0;
+    margin: 15px 0;
+    background: #843428;
+    color: #fff;
+  }
+  .publications_info {
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+  .publications_title {
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+  .publications_description {
+    font-size: 18px;
+  }
+  .publications_image {
+    flex: none;
+    width: 100%;
+  }
+  .gallery_item {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .post_description {
+    margin-top: 20px;
+    font-size: 21px;
+    white-space: pre-line;
+  }
+  .post_description img {
+    vertical-align: top;
+  }
+  .post-navigation {
+    display: block;
+    margin-top: 40px;
+  }
+  .post-navigation_section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .post-navigation a {
+    color: #000;
+    transition: 0.5s;
+    font-size: 18px;
+  }
+  .post-navigation a:hover {
+    color: #e9d445;
+    transition: 0.5s;
   }
   .footer_box {
     padding-top: 20px;

@@ -602,7 +602,7 @@ ul, li, button, a, h1, h2, p {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 200;
+    z-index: 140;
     background: #a3a3a3;
     padding: 10px 10px;
     &_button {
@@ -644,6 +644,81 @@ ul, li, button, a, h1, h2, p {
       }
       &.show {
         display: block;
+      }
+    }
+  }
+
+  .news {
+    &_cards {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+    &_card {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  .publications {
+    &_card {
+      display: block;
+      padding: 0;
+      margin: 15px 0;
+      background: $main_color;
+      color: #fff;
+    }
+    &_info {
+      padding: 20px 0;
+      margin: 0 20px;
+    }
+    &_title {
+      font-size: 21px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    &_description {
+      font-size: 18px;
+    }
+    &_image {
+      flex: none;
+      width: 100%;
+    }
+  }
+
+  .gallery {
+    &_item {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  .post {
+    &_description {
+      margin-top: 20px;
+      font-size: 21px;
+      white-space: pre-line;
+      img {
+        vertical-align: top;
+      }
+    }
+  }
+  .post-navigation {
+    display: block;
+
+    margin-top: 40px;
+    &_section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #000;
+      transition: 0.5s;
+      font-size: 18px;
+      &:hover {
+        color: $active_color;
+        transition: 0.5s;
       }
     }
   }
