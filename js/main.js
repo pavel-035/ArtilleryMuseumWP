@@ -3,3 +3,11 @@ $(document).ready(function(){
         autoplay: true
     });
 });
+
+function showBurgerMenu(value) {
+    if (value) {
+        $('#burger_menu').addClass('show');
+    } else {
+        $('#burger_menu').removeClass('show');
+    }
+}
