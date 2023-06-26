@@ -32,7 +32,7 @@ get_header();
                 <pre class="information_text">
                   <?= $about_museum ?>
                 </pre>
-                <div >
+                <div>
                     <ul class="information_timetable timetable">
                       <? foreach ($timetable as $item) { ?>
                           <li class="timetable_item">

@@ -134,6 +134,8 @@ ul, li, button, a, h1, h2, p {
   padding: 10px 20px;
   margin-right: 30px;
   background: #843428;
+  border: none;
+  cursor: pointer;
   font-size: 25px;
   line-height: 1.2em;
   text-transform: lowercase;
@@ -156,10 +158,45 @@ ul, li, button, a, h1, h2, p {
 .info_link {
   color: #000;
   transition: 0.5s;
+  cursor: pointer;
 }
 .info_link:hover {
   color: #e9d445;
   transition: 0.5s;
+}
+
+.buy {
+  background: #843428;
+}
+.buy_label {
+  color: #fff;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+.buy_input {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.15) no-repeat 50% 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 18px;
+}
+.buy_input::placeholder {
+  color: #fff;
+}
+.buy_button {
+  display: block;
+  background: rgba(255, 255, 255, 0.15) no-repeat 50% 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 18px;
+  padding: 15px;
+  margin: 15px 0 0 auto;
+  cursor: pointer;
 }
 
 .navigation {
@@ -362,7 +399,7 @@ ul, li, button, a, h1, h2, p {
   width: 100%;
 }
 
-.gallery-modal {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -372,12 +409,11 @@ ul, li, button, a, h1, h2, p {
   display: none;
   justify-content: center;
   align-items: center;
-  background: #843428;
 }
-.gallery-modal.show {
+.modal.show {
   display: flex;
 }
-.gallery-modal_close {
+.modal_close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -386,8 +422,12 @@ ul, li, button, a, h1, h2, p {
   border: none;
   opacity: 0.75;
 }
-.gallery-modal_close:hover {
+.modal_close:hover {
   opacity: 1;
+}
+
+.gallery-modal {
+  background: #843428;
 }
 .gallery-modal_item {
   display: flex;

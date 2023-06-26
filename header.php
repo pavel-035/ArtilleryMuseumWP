@@ -70,12 +70,12 @@
                           <? }; ?>
                         </ul>
                         <div class="banner_buttons">
-                            <a href="#" class="banner_button">
+                            <button
+                                class="banner_button"
+                                onclick="showBuyForm(true)"
+                            >
                                 купить билет
-                            </a>
-                            <a href="#" class="banner_button">
-                                пушкинская карта
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -90,12 +90,12 @@
                     </a>
                 </li>
                 <li class="info_item">
-                    <a
-                        href="#"
+                    <span
                         class="info_link"
+                        onclick="showBuyForm(true)"
                     >
                         заказ экскурсий
-                    </a>
+                    </span>
                 </li>
                 <li class="info_item">
                     <p>
@@ -123,3 +123,28 @@
 
       wp_nav_menu( $args ); ?>
     </section>
+
+    <div id="buy_form" class="buy modal">
+        <button
+            class="modal_close"
+            onclick="showBuyForm(false)"
+        >
+            <img src="<?php bloginfo('template_directory') ?>/src/icons/x.svg" alt="close">
+        </button>
+        <div class="buy_box">
+            <div class="buy_label">
+                Введите номер телефона, и ожидайте звонка
+            </div>
+            <input
+                class="buy_input"
+                type="text"
+                placeholder="тел.:"
+            >
+            <button
+                class="buy_button"
+                onclick="showBuyForm(false)"
+            >
+                отправить
+            </button>
+        </div>
+    </div>

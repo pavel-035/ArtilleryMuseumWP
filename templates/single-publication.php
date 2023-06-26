@@ -23,9 +23,9 @@ $next_post = get_next_post();
 get_header();
 ?>
     <main>
-        <div id="gallery_modal" class="gallery-modal">
+        <div id="gallery_modal" class="gallery-modal modal">
             <button
-                class="gallery-modal_close"
+                class="modal_close"
                 onclick="showGalleryModal(false)"
             >
                 <img src="<?php bloginfo('template_directory') ?>/src/icons/x.svg" alt="close">
