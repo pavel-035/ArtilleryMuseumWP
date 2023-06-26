@@ -120,8 +120,8 @@ $main_warning = carbon_get_theme_option('main_warning');
 </section>
 <section class="burger">
     <button
-        class="burger_button"
-        onclick="showBurgerMenu(true)"
+            class="burger_button"
+            onclick="showBurgerMenu(true)"
     >
         <img src="<?php bloginfo('template_directory') ?>/src/icons/menu.svg" alt="menu">
     </button>

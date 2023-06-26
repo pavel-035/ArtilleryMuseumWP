@@ -647,4 +647,39 @@ ul, li, button, a, h1, h2, p {
       }
     }
   }
+
+  .footer {
+    &_box {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &_section {
+      display: block;
+    }
+    &_information {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+    &_navigation {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 15px 0;
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        color: $main_color;
+        font-size: 21px;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        transition: 0.5s;
+        &:hover {
+          color: #000;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
 }

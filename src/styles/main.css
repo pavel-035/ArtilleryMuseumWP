@@ -591,6 +591,38 @@ ul, li, button, a, h1, h2, p {
   .burger_menu.show {
     display: block;
   }
+  .footer_box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer_section {
+    display: block;
+  }
+  .footer_information {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .footer_navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+  .footer_navigation li {
+    margin-bottom: 10px;
+  }
+  .footer_navigation a {
+    color: #843428;
+    font-size: 21px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .footer_navigation a:hover {
+    color: #000;
+    transition: 0.5s;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
