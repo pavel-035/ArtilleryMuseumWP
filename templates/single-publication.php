@@ -23,6 +23,24 @@ $next_post = get_next_post();
 get_header();
 ?>
     <main>
+        <div id="gallery_modal" class="gallery-modal">
+            <button
+                class="gallery-modal_close"
+                onclick="showGalleryModal(false)"
+            >
+                <img src="<?php bloginfo('template_directory') ?>/src/icons/x.svg" alt="close">
+            </button>
+            <div id="media_slider" class="gallery-modal_box box">
+              <? foreach (get_field('publications_media_image', $publications_id) as $item) { ?>
+                  <div class="gallery-modal_item">
+                      <div class="gallery-modal_image">
+                          <img src="<?php echo $item; ?>" alt="image">
+                      </div>
+                  </div>
+              <?php } ?>
+            </div>
+        </div>
+
         <section class="single-publications post page">
             <div class="single-publications_box">
                 <h2 class="single-publications_head box page_head">
@@ -34,10 +52,13 @@ get_header();
 
                 <div class="single-publications_gallery gallery">
                     <div class="gallery_box box">
-                      <? foreach (get_field('publications_media_image', $publications_id) as $item) { ?>
-                          <div class="gallery_item">
+                      <? foreach (get_field('publications_media_image', $publications_id) as $key => $value) { ?>
+                          <div
+                              class="gallery_item"
+                              onclick="showGalleryModal(true, <?php echo $key; ?>)"
+                          >
                               <div class="gallery_image img_box">
-                                  <img src="<?php echo $item; ?>" alt="image">
+                                  <img src="<?php echo $value; ?>" alt="image">
                               </div>
                           </div>
                       <?php } ?>

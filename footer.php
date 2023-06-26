@@ -57,5 +57,8 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/gallery.js"></script>
 </body>
 </html>

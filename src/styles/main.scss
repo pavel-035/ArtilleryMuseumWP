@@ -29,12 +29,14 @@ ul, li, button, a, h1, h2, p {
 
   box-sizing: border-box;
 }
+
 .img_box {
   font-size: 0;
   img {
     width: 100%;
   }
 }
+
 .page {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -46,6 +48,7 @@ ul, li, button, a, h1, h2, p {
     padding-bottom: 15px;
   }
 }
+
 .timetable {
   &_item {
     font-size: 18px;
@@ -55,6 +58,7 @@ ul, li, button, a, h1, h2, p {
     }
   }
 }
+
 .post {
   &_description {
     font-size: 21px;
@@ -373,6 +377,7 @@ ul, li, button, a, h1, h2, p {
 
     background: rgba(255,255,255,.15) no-repeat 50% 50%;
     border: 1px solid rgba(255,255,255,.4);
+    cursor: pointer;
   }
   &_image {
     display: flex;
@@ -380,5 +385,52 @@ ul, li, button, a, h1, h2, p {
     align-items: center;
     height: 100%;
     width: 100%;
+  }
+}
+
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 150;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background: $main_color;
+  &.show {
+    display: flex;
+  }
+  &_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }

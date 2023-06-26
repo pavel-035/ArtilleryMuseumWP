@@ -27,6 +27,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/src/styles/main.css">
+    
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/js/slick/slick/slick.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/js/slick/slick/slick-theme.css">
 </head>
 
 <body>
