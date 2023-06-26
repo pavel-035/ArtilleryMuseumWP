@@ -28,10 +28,10 @@ get_header();
                 <h2 class="single-news_head page_head">
                   <?php single_post_title(); ?>
                 </h2>
-                <pre class="single-news_description">
+                <pre class="single-news_description post_description">
                   <?= get_field('news_description', $news_id); ?>
                 </pre>
-                <div class="single-news_navigation">
+                <div class="single-news_navigation post-navigation">
                     <div>
                       <?php if ($previous_post) : ?>
                           <a href="<?= get_permalink($previous_post->ID); ?>">

@@ -206,6 +206,33 @@ $news_args = array(
 
 register_post_type( 'news', $news_args );
 
+
+$publications_labels = array(
+  'name' => 'Публикации',
+  'singular_name' => 'Публикация',
+  'add_new' => 'Добавить публикацию',
+  'add_new_item' => 'Добавить публикацию',
+  'edit_item' => 'Редактировать публикацию',
+  'new_item' => 'Новая публикация',
+  'all_items' => 'Все публикации',
+  'search_items' => 'Искать публикацию',
+  'not_found' =>  'Публикации по заданным критериям не найдены.',
+  'not_found_in_trash' => 'В корзине нет публикаций.',
+  'menu_name' => 'Публикации'
+);
+
+$publications_args = array(
+  'labels' => $publications_labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'has_archive' => false,
+  'menu_icon' => 'dashicons-image-filter',
+  'menu_position' => 4,
+  'supports' => array( 'title', 'editor', 'thumbnail' )
+);
+
+register_post_type( 'publications', $publications_args );
+
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
   Container::make( 'theme_options', __( 'Наполнение' ) )
